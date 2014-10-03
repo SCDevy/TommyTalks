@@ -1,0 +1,19 @@
+{
+  "name": "tommytalks",
+  "version": "0.0.0",
+  "description": "tommytalks ==========",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SCDevy/tommytalks.git"
+  },
+  "author": "Stephen Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SCDevy/tommytalks/issues"
+  },
+  "homepage": "https://github.com/SCDevy/tommytalks"
+}
