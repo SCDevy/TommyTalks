@@ -1,17 +1,16 @@
 {
-  "name": "tommytalks",
+  "name": "tommytalks.org",
   "version": "0.0.0",
-  "description": "tommytalks ==========",
+  "description": "Tommy Talks provides an online platform for talented and innovative students, faculty and alumni to spread their ideas in the form of short, powerful talks.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/SCDevy/tommytalks.git"
   },
   "author": "Stephen Chen",
-  "license": "MIT",
+  "license": "",
   "bugs": {
     "url": "https://github.com/SCDevy/tommytalks/issues"
   },

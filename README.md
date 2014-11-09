@@ -1,4 +1,1 @@
-tommytalks
-==========
-
-Tommy Talks video site.
+Developer and designer - Stephen Chen . http://stephenc.me/
