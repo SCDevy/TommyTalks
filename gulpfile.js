@@ -3,6 +3,8 @@ var jshint   = require('gulp-jshint');
 var less     = require('gulp-less');
 var path     = require('path');
 
+// TODO: set up "build" folder
+
 gulp.task('default', ['jshint', 'less'], function() {
   gulp.watch('./src/js/*.js', function() {
     gulp.run('jshint');

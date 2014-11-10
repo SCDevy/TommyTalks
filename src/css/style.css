@@ -128,11 +128,19 @@ table {
 /* Author: Stephen Chen 2014 */
 /* ========================================================================= */
 /* Variables */
+/* ----------------------------------------------------- */
+/* Fonts */
+/* ----------------------------------------------------- */
+@font-face {
+  font-family: 'Lane';
+  src: url('../font/lane.ttf');
+}
 /* General */
+/* ----------------------------------------------------- */
 body {
-  font-family: 'Montserrat', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   background: #FFF;
-  color: #222;
+  color: #929292;
 }
 .container {
   width: 1024px;
@@ -149,45 +157,139 @@ body {
   display: block;
 }
 /* Header */
+/* ----------------------------------------------------- */
 .header {
+  width: 1024px;
+  min-width: 768px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  height: 120px;
+  line-height: 120px;
+  text-align: left;
+  overflow: hidden;
+}
+.letterhead {
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+}
+ul.navlist {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  display: inline-block;
+  font-family: 'Lane';
+}
+ul.navlist li {
+  margin-left: 40px;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+ul.navlist li a {
+  text-decoration: none;
+  color: inherit;
+}
+ul.navlist li a:hover {
+  color: #f6851f;
+}
+/* Talks */
+/* ----------------------------------------------------- */
+.talks {
+  width: 1024px;
+  min-width: 768px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  height: 480px;
+  margin-bottom: 80px;
+  border: 1px solid #DDD;
+}
+/* Values */
+/* ----------------------------------------------------- */
+.values {
   width: 100%;
   min-width: 768px;
   margin: 0 auto;
   position: relative;
   display: block;
-  height: 110px;
-  line-height: 110px;
+  padding: 5px 0;
   text-align: center;
-  background: #333;
 }
-.letterhead {
-  width: 320px;
+.values .value {
+  width: 58px;
+  height: 58px;
+  margin: 0 90px;
   display: inline-block;
-  vertical-align: middle;
 }
-.menuicon {
-  width: 121px;
-  height: 110px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 28px;
-  color: #FFF;
+/* About */
+/* ----------------------------------------------------- */
+.about {
+  width: 1024px;
+  min-width: 768px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  font-size: 0;
 }
-/* ul.navlist {
-  position: absolute;
-  right: 0;
+.whoweare,
+.mission {
+  width: 50%;
   display: inline-block;
-
-  li {
-    margin-left: 30px;
-    display: inline-block;
-    font-size: 18px;
-    letter-spacing: 2px;
-    text-transform: lowercase;
-
-    &:hover {
-      color: @theme-yellow;
-    }
-  }
-} */
+  vertical-align: top;
+}
+.whoweare h2,
+.mission h2 {
+  font-family: 'Lane';
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #f6851f;
+}
+.whoweare p,
+.mission p {
+  padding: 10px 0 0 0;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 32px;
+}
+.whoweare {
+  padding: 80px 0;
+  text-align: left;
+}
+.mission {
+  padding: 80px 0;
+  text-align: right;
+}
+.divider {
+  border: 0;
+  border-top: 1px solid #DDD;
+}
+/* Footer */
+/* ----------------------------------------------------- */
+.footer {
+  width: 100%;
+  min-width: 768px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  padding: 40px 0;
+  text-align: center;
+}
+.socialmedia {
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+}
+.copyright {
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

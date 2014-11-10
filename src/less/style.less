@@ -5,13 +5,25 @@
 /* ========================================================================= */
 
 /* Variables */
-@theme-yellow: #FDD040;
-@header-height: 110px;
+/* ----------------------------------------------------- */
+@theme-orange: #F6851F;
+@theme-gray: #929292;
+@header-height: 120px;
+@value-hw: 58px;
+@sm-hw: 42px;
+
+/* Fonts */
+/* ----------------------------------------------------- */
+@font-face {
+    font-family: 'Lane';
+    src: url('../font/lane.ttf');
+}
 
 /* General */
+/* ----------------------------------------------------- */
 body {
-  font-family: 'Montserrat', Helvetica Neue, Helvetica, Arial, sans-serif;
-  background: #FFF; color: #222;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: #FFF; color: @theme-gray;
 }
 .container {
   width: 1024px;
@@ -26,4 +38,130 @@ body {
   margin: 0 auto;
   position: relative;
   display: block;
+}
+
+/* Header */
+/* ----------------------------------------------------- */
+.header {
+  .container;
+
+  height: @header-height;
+  line-height: @header-height;
+  text-align: left;
+  overflow: hidden;
+}
+.letterhead {
+  height: @header-height - 40;
+  display: inline-block;
+  vertical-align: middle;
+}
+ul.navlist {
+  position: absolute;
+  top: 14px; right: 0;
+  display: inline-block;
+  font-family: 'Lane';
+
+  li {
+    margin-left: 40px;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: @theme-orange;
+      }
+    }
+  }
+}
+
+/* Talks */
+/* ----------------------------------------------------- */
+.talks {
+  .container;
+
+  height: 480px;
+  margin-bottom: 80px;
+  border: 1px solid #DDD;
+}
+
+/* Values */
+/* ----------------------------------------------------- */
+.values {
+  .container-full;
+
+  padding: 5px 0;
+  text-align: center;
+
+  .value {
+    width: @value-hw; height: @value-hw;
+    margin: 0 90px;
+    display: inline-block;
+  }
+}
+
+/* About */
+/* ----------------------------------------------------- */
+.about {
+  .container;
+
+  font-size: 0;
+}
+.whoweare, .mission {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+
+  h2 {
+    font-family: 'Lane';
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: @theme-orange;
+  }
+  p {
+    padding: 10px 0 0 0;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 32px;
+  }
+}
+.whoweare {
+  padding: 80px 0;
+  text-align: left;
+}
+.mission {
+  padding: 80px 0;
+  text-align: right;
+}
+.divider {
+  border: 0;
+  border-top: 1px solid #DDD;
+}
+
+/* Footer */
+/* ----------------------------------------------------- */
+.footer {
+  .container-full;
+
+  padding: 40px 0;
+  text-align: center;
+}
+.socialmedia {
+  width: @sm-hw; height: @sm-hw;
+  display: inline-block;
+}
+.copyright {
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
