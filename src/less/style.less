@@ -87,8 +87,45 @@ ul.navlist {
   .container;
 
   height: 480px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   border: 1px solid #DDD;
+
+  h1 {
+    font-family: 'Lane';
+    letter-spacing: 6px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: none;
+  }
+}
+.session {
+  width: 150px; height: 100%;
+  position: relative;
+  background: @theme-orange;
+
+  .wrapper {
+    width: 320px; height: auto;
+    position: absolute;
+    top: 170px; left: -85px;
+    font-family: 'Lane';
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #FFF;
+    transform: rotate(-90deg);
+    .event {
+
+    }
+    .date {
+      padding-top: 10px;
+      font-size: 24px;
+      font-weight: normal;
+      letter-spacing: 4px;
+    }
+  }
 }
 
 /* Values */
@@ -118,7 +155,7 @@ ul.navlist {
   display: inline-block;
   vertical-align: top;
 
-  h2 {
+  h1 {
     font-family: 'Lane';
     font-size: 24px;
     font-weight: bold;
@@ -127,18 +164,18 @@ ul.navlist {
     color: @theme-orange;
   }
   p {
-    padding: 10px 0 0 0;
+    padding-top: 10px;
     font-size: 20px;
     font-weight: 200;
     line-height: 32px;
   }
 }
 .whoweare {
-  padding: 80px 0;
+  padding: 70px 0;
   text-align: left;
 }
 .mission {
-  padding: 80px 0;
+  padding: 70px 0;
   text-align: right;
 }
 .divider {
