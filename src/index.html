@@ -4,8 +4,13 @@
     <title>Tommy Talks</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/lib/flippant/flippant.css">
   </head>
   <body>
+
+    <section class="popup">
+      <!-- Videos get loaded in here. -->
+    </section>
 
     <section class="header">
       <img src="img/letterhead.png" alt="Stephen Chen" class="letterhead">
@@ -26,25 +31,25 @@
         <h1><span>Talk One</span> October 11, 2014</h1>
         <ul class="videos">
           <li>
-            <div class="card" style="background-image: url('img/demo/ariel.jpg');">
+            <div class="card" style="background-image: url('img/demo/ariel.jpg');" id="video-00-00">
               <div class="speaker">Ariel Sobel</div>
               <div class="title">Strip, Don't Tease</div>
             </div>
           </li>
           <li>
-            <div class="card" style="background-image: url('img/demo/alex.jpg');">
+            <div class="card" style="background-image: url('img/demo/alex.jpg');" id="video-00-01">
               <div class="speaker">Alex Zhang</div>
               <div class="title">Expand Your Mind: Lucid Dreaming 101</div>
             </div>
           </li>
           <li>
-            <div class="card" style="background-image: url('img/demo/logan.jpg');">
+            <div class="card" style="background-image: url('img/demo/logan.jpg');" id="video-00-02">
               <div class="speaker">Logan Heley</div>
               <div class="title">American Politics: We Need You</div>
             </div>
           </li>
           <li>
-            <div class="card" style="background-image: url('img/demo/michelle.jpg');">
+            <div class="card" style="background-image: url('img/demo/michelle.jpg');" id="video-00-03">
               <div class="speaker">Michelle Lau</div>
               <div class="title">How To Make Love Like A Pornstar: Results May Vary</div>
             </div>
@@ -81,6 +86,8 @@
     <!-- scripts -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="js/lib/flippant/flippant.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
         function scrollTo(link, target) {
             link.click(function(e) {

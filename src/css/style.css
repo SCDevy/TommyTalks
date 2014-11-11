@@ -158,6 +158,20 @@ body {
 }
 /* Header */
 /* ----------------------------------------------------- */
+.popup {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+}
+/* Header */
+/* ----------------------------------------------------- */
 .header {
   width: 1024px;
   min-width: 768px;
@@ -229,6 +243,7 @@ ul.navlist li a:hover {
 }
 .event h1 {
   margin: 5px 0;
+  position: relative;
   font-family: 'Lane';
   letter-spacing: 6px;
   font-size: 18px;
@@ -246,11 +261,13 @@ ul.navlist li a:hover {
 .videos {
   width: 100%;
   height: 100%;
+  position: relative;
   font-size: 0;
 }
 .videos li {
   width: 50%;
   height: 50%;
+  position: relative;
   display: inline-block;
   font-size: 18px;
 }
