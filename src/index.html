@@ -10,8 +10,8 @@
     <section class="header">
       <img src="img/letterhead.png" alt="Stephen Chen" class="letterhead">
       <ul class="navlist">
-        <li><a href="#talks">Talks</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#talks" id="talkslink">Talks</a></li>
+        <li><a href="#about" id="aboutlink">About</a></li>
       </ul>
     </section>
 
@@ -19,7 +19,7 @@
       <h1>Talks</h1>
       <div class="session">
         <div class="wrapper">
-          <h2 class="event">Talk #1</h2>
+          <h2 class="event">Talk <span class="eventnum">One</span></h2>
           <div class="date">October 11, 2014</div>
         </div>
       </div>
@@ -51,7 +51,22 @@
     </section>
 
     <!-- scripts -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/angular/angular.min.js"></script>
+    <script>
+        function scrollTo(link, target) {
+            link.click(function(e) {
+                e.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 800);
+            });
+        }
+
+        scrollTo($('#talkslink'), $('#talks'));
+        scrollTo($('#aboutlink'), $('#about'));
+    </script>
 
   </body>
 </html>

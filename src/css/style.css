@@ -207,7 +207,7 @@ ul.navlist li a:hover {
   display: block;
   height: 480px;
   margin-bottom: 60px;
-  border: 1px solid #DDD;
+  /* border: 1px solid #DDD; */
 }
 .talks h1 {
   font-family: 'Lane';
@@ -218,7 +218,7 @@ ul.navlist li a:hover {
   display: none;
 }
 .session {
-  width: 150px;
+  width: 80px;
   height: 100%;
   position: relative;
   background: #f6851f;
@@ -227,16 +227,18 @@ ul.navlist li a:hover {
   width: 320px;
   height: auto;
   position: absolute;
-  top: 170px;
-  left: -85px;
+  top: 130px;
+  left: -120px;
   font-family: 'Lane';
-  font-size: 32px;
   font-weight: bold;
   text-align: right;
   text-transform: uppercase;
   letter-spacing: 6px;
   color: #FFF;
   transform: rotate(-90deg);
+}
+.session .wrapper .event {
+  font-size: 32px;
 }
 .session .wrapper .date {
   padding-top: 10px;
