@@ -183,6 +183,8 @@ ul.navlist {
 }
 ul.navlist li {
   margin-left: 40px;
+  margin-right: -4px;
+  /* correct for letter spacing */
   display: inline-block;
   position: relative;
   font-size: 16px;
@@ -205,46 +207,95 @@ ul.navlist li a:hover {
   margin: 0 auto;
   position: relative;
   display: block;
-  height: 480px;
+  height: auto;
   margin-bottom: 60px;
   /* border: 1px solid #DDD; */
 }
-.talks h1 {
-  font-family: 'Lane';
-  letter-spacing: 6px;
-  font-size: 32px;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: none;
-}
-.session {
-  width: 80px;
-  height: 100%;
-  position: relative;
-  background: #f6851f;
-}
-.session .wrapper {
-  width: 320px;
-  height: auto;
+.controls {
+  margin-top: 12px;
   position: absolute;
-  top: 130px;
-  left: -120px;
+  top: 0;
+  right: 0;
+}
+.navigate {
+  font-size: 28px;
+  color: #EEE;
+}
+.navigate .backward {
+  margin-right: 2px;
+}
+.navigate .forward {
+  margin-left: 2px;
+}
+.event h1 {
+  margin: 5px 0;
+  font-family: 'Lane';
+  letter-spacing: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.event h1 span {
+  padding: 10px 14px 10px 20px;
+  /* correct for letter spacing */
+  display: inline-block;
+  font-size: 24px;
+  background: #f6851f;
+  color: #FFF;
+}
+.videos {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+.videos li {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  font-size: 18px;
+}
+.card {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  display: inline-block;
+  border: 5px solid transparent;
+  vertical-align: top;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+}
+.card .speaker,
+.card .title {
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  display: inline-block;
   font-family: 'Lane';
   font-weight: bold;
-  text-align: right;
   text-transform: uppercase;
+  overflow: hidden;
+}
+.card .speaker {
+  padding: 10px 4px 10px 10px;
+  /* correct for letter spacing */
+  bottom: 60px;
+  font-size: 18px;
   letter-spacing: 6px;
+  background: #f6851f;
   color: #FFF;
-  transform: rotate(-90deg);
+  z-index: 1;
 }
-.session .wrapper .event {
-  font-size: 32px;
-}
-.session .wrapper .date {
-  padding-top: 10px;
-  font-size: 24px;
-  font-weight: normal;
-  letter-spacing: 4px;
+.card .title {
+  padding: 10px 8px 10px 10px;
+  /* correct for letter spacing */
+  bottom: 30px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #FFF;
+  z-index: 0;
 }
 /* Values */
 /* ----------------------------------------------------- */
@@ -281,6 +332,8 @@ ul.navlist li a:hover {
 }
 .whoweare h1,
 .mission h1 {
+  margin-right: -4px;
+  /* correct for letter spacing */
   font-family: 'Lane';
   font-size: 24px;
   font-weight: bold;

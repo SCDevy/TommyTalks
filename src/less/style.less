@@ -62,7 +62,7 @@ ul.navlist {
   font-family: 'Lane';
 
   li {
-    margin-left: 40px;
+    margin-left: 40px; margin-right: -4px; /* correct for letter spacing */
     display: inline-block;
     position: relative;
     font-size: 16px;
@@ -86,17 +86,88 @@ ul.navlist {
 .talks {
   .container;
 
-  height: 480px;
+  height: auto;
   margin-bottom: 60px;
   /* border: 1px solid #DDD; */
-
+}
+.controls {
+  margin-top: 12px;
+  position: absolute;
+  top: 0; right: 0;
+}
+.navigate {
+  font-size: 28px;
+  color: #EEE;
+  .backward {
+    margin-right: 2px;
+  }
+  .forward {
+    margin-left: 2px;
+  }
+}
+.event {
   h1 {
+    margin: 5px 0;
     font-family: 'Lane';
     letter-spacing: 6px;
-    font-size: 32px;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    display: none;
+
+    span {
+      padding: 10px 14px 10px 20px; /* correct for letter spacing */
+      display: inline-block;
+      font-size: 24px;
+      background: @theme-orange; color: #FFF;
+    }
+  }
+}
+.videos {
+  width: 100%; height: 100%;
+  font-size: 0;
+
+  li {
+    width: 50%; height: 50%;
+    display: inline-block;
+    font-size: 18px;
+  }
+}
+.card {
+  width: 100%; height: 280px;
+  position: relative;
+  display: inline-block;
+  border: 5px solid transparent;
+  vertical-align: top;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+
+  .speaker, .title {
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    font-family: 'Lane';
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+  .speaker {
+    padding: 10px 4px 10px 10px; /* correct for letter spacing */
+    bottom: 60px;
+    font-size: 18px;
+    letter-spacing: 6px;
+    background: @theme-orange; color: #FFF;
+    z-index: 1;
+  }
+  .title {
+    padding: 10px 8px 10px 10px; /* correct for letter spacing */
+    bottom: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    background: rgba(0,0,0,0.6); color: #FFF;
+    z-index: 0;
   }
 }
 
@@ -128,6 +199,7 @@ ul.navlist {
   vertical-align: top;
 
   h1 {
+    margin-right: -4px; /* correct for letter spacing */
     font-family: 'Lane';
     font-size: 24px;
     font-weight: bold;
