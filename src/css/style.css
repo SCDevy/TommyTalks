@@ -298,7 +298,6 @@ ul.navlist li a:hover {
 }
 .card-front,
 .card-back {
-  /* hide back of pane during swap */
   position: absolute;
   top: 0;
   left: 0;
@@ -310,6 +309,7 @@ ul.navlist li a:hover {
   background-position: center;
   background-clip: padding-box;
   backface-visibility: hidden;
+  /* hide back of pane during swap */
 }
 .card-front {
   width: 100%;
@@ -403,6 +403,31 @@ ul.navlist li a:hover {
   background: #FFF;
   color: #f6851f;
   transition: 0.4s;
+}
+.card-fill {
+  width: 100%;
+  height: 280px;
+  padding: 30px 20px;
+  text-align: center;
+  line-height: 220px;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px solid #FFF;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+  background: #f6851f;
+}
+.card-fill h2 {
+  margin-right: -6px;
+  /* correct for letter spacing */
+  font-family: 'Lane';
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: #FFF;
 }
 /* About */
 /* ----------------------------------------------------- */

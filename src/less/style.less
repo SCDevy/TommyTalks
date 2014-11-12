@@ -10,6 +10,7 @@
 @theme-gray: #929292;
 @header-height: 120px;
 @section-space: 90px;
+@card-height: 280px;
 @value-hw: 58px;
 @sm-hw: 42px;
 
@@ -170,7 +171,7 @@ ul.navlist {
   transition: 0.6s;
   transform-style: preserve-3d;
 }
-.card-front, .card-back { /* hide back of pane during swap */
+.card-front, .card-back {
 	position: absolute;
 	top: 0; left: 0;
   display: inline-block;
@@ -180,10 +181,10 @@ ul.navlist {
   background-size: cover;
   background-position: center;
   background-clip: padding-box;
-  backface-visibility: hidden;
+  backface-visibility: hidden; /* hide back of pane during swap */
 }
 .card-front {
-  width: 100%; height: 280px;
+  width: 100%; height: @card-height;
   position: relative;
   transform: rotateY(0deg);
 
@@ -215,7 +216,7 @@ ul.navlist {
   }
 }
 .card-back {
-  width: 100%; height: 280px;
+  width: 100%; height: @card-height;
   padding: 30px 20px;
   text-align: center;
   background: @theme-orange;
@@ -263,6 +264,30 @@ ul.navlist {
       background: #FFF; color: @theme-orange;
       transition: 0.4s;
     }
+  }
+}
+.card-fill {
+  width: 100%; height: @card-height;
+  padding: 30px 20px;
+  text-align: center;
+  line-height: @card-height - 60;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px solid #FFF;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+  background: @theme-orange;
+
+  h2 {
+    margin-right: -6px; /* correct for letter spacing */
+    font-family: 'Lane';
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #FFF;
   }
 }
 
