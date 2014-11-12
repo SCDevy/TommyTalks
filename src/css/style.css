@@ -497,7 +497,7 @@ ul.navlist li a:hover {
   padding: 40px 0;
   text-align: center;
 }
-.footer a {
+.footer > a {
   width: 42px;
   height: 42px;
   text-decoration: none;
@@ -507,10 +507,15 @@ ul.navlist li a:hover {
   width: 100%;
   height: 100%;
 }
+.contact,
 .copyright {
   margin-top: 15px;
   font-size: 12px;
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+.contact a,
+.copyright a {
+  color: #f6851f;
 }
