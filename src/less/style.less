@@ -9,6 +9,7 @@
 @theme-orange: #F6851F;
 @theme-gray: #929292;
 @header-height: 120px;
+@section-space: 90px;
 @value-hw: 58px;
 @sm-hw: 42px;
 
@@ -38,6 +39,18 @@ body {
   margin: 0 auto;
   position: relative;
   display: block;
+}
+
+.divider {
+  .container;
+
+  margin-bottom: @section-space;
+  border: 0;
+  border-top: 1px solid #DDD;
+
+  &.nopad {
+    margin-bottom: 0 !important;
+  }
 }
 
 /* Header */
@@ -84,9 +97,11 @@ ul.navlist {
     a {
       text-decoration: none;
       color: inherit;
+      transition: 0.2s;
 
       &:hover {
         color: @theme-orange;
+        transition: 0.2s;
       }
     }
   }
@@ -98,7 +113,7 @@ ul.navlist {
   .container;
 
   height: auto;
-  margin-bottom: 60px;
+  margin-bottom: @section-space;
   /* border: 1px solid #DDD; */
 }
 .controls {
@@ -201,39 +216,53 @@ ul.navlist {
 }
 .card-back {
   width: 100%; height: 280px;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
-  line-height: 240px;
   background: @theme-orange;
   transform: rotateY(180deg);
 
+  .speaker {
+    margin-right: -6px; /* correct for letter spacing */
+    padding-bottom: 15px;
+    font-family: 'Lane';
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #FFF;
+  }
+  .description {
+    padding-bottom: 20px;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 22px;
+    color: #FFF;
+  }
   .watch {
-    padding: 10px 4px 10px 10px; /* correct for letter spacing */
+    width: 100%;
+    padding-bottom: 30px;
+    position: absolute;
+    bottom: 0; right: 0; left: 0;
+  }
+  .watch button {
+    padding: 8px 4px 8px 8px; /* correct for letter spacing */
     position: relative;
     display: inline-block;
-    border: 2px solid white;
+    border: 1px solid white;
     font-family: 'Lane';
-    letter-spacing: 6px;
-    font-size: 24px;
+    letter-spacing: 4px;
+    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     background: none; color: #FFF;
     cursor: pointer;
-  }
-}
+    transition: 0.4s;
 
-/* Values */
-/* ----------------------------------------------------- */
-.values {
-  .container-full;
-
-  padding: 5px 0;
-  text-align: center;
-
-  .value {
-    width: @value-hw; height: @value-hw;
-    margin: 0 90px;
-    display: inline-block;
+    &:hover {
+      background: #FFF; color: @theme-orange;
+      transition: 0.4s;
+    }
   }
 }
 
@@ -242,6 +271,7 @@ ul.navlist {
 .about {
   .container;
 
+  margin-bottom: @section-space;
   font-size: 0;
 }
 .whoweare, .mission {
@@ -251,6 +281,7 @@ ul.navlist {
 
   h1 {
     margin-right: -4px; /* correct for letter spacing */
+    padding-bottom: 10px;
     font-family: 'Lane';
     font-size: 24px;
     font-weight: bold;
@@ -259,23 +290,55 @@ ul.navlist {
     color: @theme-orange;
   }
   p {
-    padding-top: 10px;
     font-size: 20px;
     font-weight: 200;
     line-height: 32px;
   }
 }
 .whoweare {
-  padding: 70px 0;
   text-align: left;
 }
 .mission {
-  padding: 70px 0;
   text-align: right;
 }
-.divider {
-  border: 0;
-  border-top: 1px solid #DDD;
+
+/* Values */
+/* ----------------------------------------------------- */
+.values {
+  .container;
+
+  margin-bottom: @section-space;
+  font-size: 0;
+  text-align: center;
+}
+.value {
+  width: 33.3%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18px;
+
+  img {
+    padding-bottom: 30px;
+    height: 50px;
+  }
+  h2 {
+    margin-right: -4px; /* correct for letter spacing */
+    padding-bottom: 20px;
+    font-family: 'Lane';
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: @theme-orange;
+  }
+  p {
+    padding: 0 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 28px;
+    box-sizing: border-box;
+  }
 }
 
 /* Footer */

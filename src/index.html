@@ -35,8 +35,12 @@
                 <div class="speaker">Ariel Sobel</div>
                 <div class="title">Strip, Don't Tease</div>
               </div>
-              <div class="card-back">
-                <button class="watch" id="watch-00-00">Watch Video</div>
+              <div class="card-back" id="watch-00-00">
+                <h2 class="speaker">Ariel Sobel</h2>
+                <p class="description">This talk emphasizes the importance of emotional vulnerability and openness.She suggests college students should be in touch with their emotions in order to have more fulfilling, honest relationships with their friends, family, and community at large.</p>
+                <div class="watch">
+                  <button>Watch Video</button>
+                </div>
               </div>
             </div>
           </li>
@@ -46,8 +50,12 @@
                 <div class="speaker">Alex Zhang</div>
                 <div class="title">Expand Your Mind: Lucid Dreaming 101</div>
               </div>
-              <div class="card-back">
-                <button class="watch" id="watch-00-00">Watch Video</div>
+              <div class="card-back" id="watch-00-01">
+                <h2 class="speaker">Alex Zhang</h2>
+                <p class="description">Proving that Inception might not be so far fetched, this talk is a step-by-step guide for the process of lucid dreaming and its potential to impact our society's thought. He challenges his audience to push their creative limits and explore in new ways.</p>
+                <div class="watch">
+                  <button>Watch Video</button>
+                </div>
               </div>
             </div>
           </li>
@@ -57,8 +65,12 @@
                 <div class="speaker">Logan Heley</div>
                 <div class="title">American Politics: We Need You</div>
               </div>
-              <div class="card-back">
-                <button class="watch" id="watch-00-00">Watch Video</div>
+              <div class="card-back" id="watch-00-02">
+                <h2 class="speaker">Logan Heley</h2>
+                <p class="description">A talk for society: that we should return to more active political engagement, dispelling the myth that our present political atmosphere is beyond saving. He suggests Americans need to more directly involve themselves in their political process if they hope to see true social change.</p>
+                <div class="watch">
+                  <button>Watch Video</button>
+                </div>
               </div>
             </div>
           </li>
@@ -68,19 +80,17 @@
                 <div class="speaker">Michelle Lau</div>
                 <div class="title">How To Make Love Like A Pornstar: Results May Vary</div>
               </div>
-              <div class="card-back">
-                <button class="watch" id="watch-00-00">Watch Video</div>
+              <div class="card-back" id="watch-00-03">
+                <h2 class="speaker">Michelle Lau</h2>
+                <p class="description">A talk focusing on the demand-side of trafficking, which has led her to study porn and the negative side affects it has on relationships and individuals. By bringing these new facts to light, she hopes her audience will make a more informed decisions when to engage in porn.</p>
+                <div class="watch">
+                  <button>Watch Video</button>
+                </div>
               </div>
             </div>
           </li>
         </ul>
       </section>
-    </section>
-
-    <section class="values">
-      <img src="img/icon/share-orange.svg" alt="Share" class="value">
-      <img src="img/icon/inspire-orange.svg" alt="Inspire" class="value">
-      <img src="img/icon/connect-orange.svg" alt="Connect" class="value">
     </section>
 
     <section class="about" id="about">
@@ -92,8 +102,29 @@
         <h1>Mission</h1>
         <p>Our mission is to share ideas, inspire students, and connect communities within University of Southern California.</p>
       </section>
-      <hr class="divider">
     </section>
+
+    <hr class="divider">
+
+    <section class="values">
+      <div class="value">
+        <img src="img/icon/share-orange.svg" alt="Share">
+        <h2>Share</h2>
+        <p>Tommy Talks highlights students, faculty, and alumni who have thought-provoking ideas. Our content consists, but is not limited to, of motivational speeches, social issue debates, student-to-student teaching series, faculty advice, and creative projects on campus.</p>
+      </div>
+      <div class="value">
+        <img src="img/icon/inspire-orange.svg" alt="Inspire">
+        <h2>Inspire</h2>
+        <p>Tommy Talks encourages students to get involved, discover like-minded peers, and create their own messages. By showcasing these ideas, we foster a community of creativity, innovation, passion, and curiosity.</p>
+      </div>
+      <div class="value">
+        <img src="img/icon/connect-orange.svg" alt="Connect">
+        <h2>Connect</h2>
+        <p>Tommy Talks opens the dialogue between students on campus. We connect those who otherwise would not meet. We create a space where the student population is aware and motivated so that they can positively influence the larger community.</p>
+      </div>
+    </section>
+
+    <hr class="divider nopad">
 
     <section class="footer">
       <a href="https://www.facebook.com/usctommytalks" target="_blank">
@@ -118,7 +149,7 @@
                 e.preventDefault();
 
                 $('html, body').animate({
-                    scrollTop: target.offset().top
+                    scrollTop: target.offset().top - 20
                 }, 800);
             });
         }
