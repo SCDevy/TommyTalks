@@ -191,8 +191,8 @@ body {
   margin: 0 auto;
   position: relative;
   display: block;
-  height: 120px;
-  line-height: 120px;
+  height: 130px;
+  line-height: 130px;
   text-align: left;
   overflow: hidden;
 }
@@ -383,7 +383,7 @@ ul.navlist li a:hover {
   right: 0;
   left: 0;
 }
-.card-back .watch button {
+.card-back .watch a {
   padding: 8px 4px 8px 8px;
   /* correct for letter spacing */
   position: relative;
@@ -394,12 +394,13 @@ ul.navlist li a:hover {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
   background: none;
   color: #FFF;
   cursor: pointer;
   transition: 0.4s;
 }
-.card-back .watch button:hover {
+.card-back .watch a:hover {
   background: #FFF;
   color: #f6851f;
   transition: 0.4s;

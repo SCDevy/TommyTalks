@@ -8,7 +8,7 @@
 /* ----------------------------------------------------- */
 @theme-orange: #F6851F;
 @theme-gray: #929292;
-@header-height: 120px;
+@header-height: 130px;
 @section-space: 90px;
 @card-height: 280px;
 @value-hw: 58px;
@@ -76,7 +76,7 @@ body {
   overflow: hidden;
 }
 .letterhead {
-  height: @header-height - 40;
+  height: @header-height - 50;
   display: inline-block;
   vertical-align: middle;
 }
@@ -246,7 +246,7 @@ ul.navlist {
     position: absolute;
     bottom: 0; right: 0; left: 0;
   }
-  .watch button {
+  .watch a {
     padding: 8px 4px 8px 8px; /* correct for letter spacing */
     position: relative;
     display: inline-block;
@@ -256,6 +256,7 @@ ul.navlist {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
+    text-decoration: none;
     background: none; color: #FFF;
     cursor: pointer;
     transition: 0.4s;
