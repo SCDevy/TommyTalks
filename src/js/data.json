@@ -1,19 +1,4 @@
-/* UI */
-function scrollTo(link, target) {
-  link.click(function(e) {
-    e.preventDefault();
-
-    $('html, body').animate({
-      scrollTop: target.offset().top - 30
-    }, 800);
-  });
-}
-
-scrollTo($('#talkslink'), $('#talks'));
-scrollTo($('#aboutlink'), $('#about'));
-
-/* Handlebars */
-var data = [
+[
   {
     num: 1,
     name:"Talk One",
@@ -92,8 +77,4 @@ var data = [
       }
     ]
   }
-];
-var templateSource = $("#talk-template").html();
-
-var template = Handlebars.compile(templateSource);
-$("#talks").append(template(data));
+]

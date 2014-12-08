@@ -256,7 +256,7 @@ ul.navlist li a:hover {
 .navigate .forward {
   margin-left: 2px;
 }
-.event h1 {
+.talk h1 {
   margin: 5px 0;
   position: relative;
   font-family: 'Lane';
@@ -265,7 +265,7 @@ ul.navlist li a:hover {
   font-weight: bold;
   text-transform: uppercase;
 }
-.event h1 span {
+.talk h1 span {
   padding: 10px 14px 10px 20px;
   /* correct for letter spacing */
   display: inline-block;

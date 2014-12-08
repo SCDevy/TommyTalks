@@ -2,17 +2,10 @@
 <html>
   <head>
     <title>Tommy Talks</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Tommy Talks provides an online platform for talented and innovative students, faculty, and alumni to spread their ideas in the form of short, powerful talks. We host speaker series events at the University of Southern California throughout the year.">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-56702951-1', 'auto');
-      ga('send', 'pageview');
-    </script>
   </head>
 
   <body>
@@ -29,106 +22,12 @@
     </section>
 
     <section class="talks" id="talks">
-      <!--
       <section class="controls">
         <div class="navigate">
           <span class="backward">&#10094;</span>
           <span class="forward">&#10095;</span>
         </div>
       </section>
-      -->
-      <section class="event" id="event-00">
-        <h1><span>Talk One</span> October 11, 2014</h1>
-        <ul class="videos">
-          <li>
-            <div class="card">
-              <div class="card-front" style="background-image: url('img/demo/ariel.jpg');" id="video-00-00">
-                <div class="speaker">Ariel Sobel</div>
-                <div class="title">Strip, Don't Tease</div>
-              </div>
-              <div class="card-back" id="watch-00-00">
-                <h2 class="speaker">Ariel Sobel</h2>
-                <p class="description">This talk emphasizes the importance of emotional vulnerability and openness.She suggests college students should be in touch with their emotions in order to have more fulfilling, honest relationships with their friends, family, and community at large.</p>
-                <div class="watch">
-                  <a href="https://www.youtube.com/watch?v=a501jtIprzc" target="_blank">Watch Video</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="card-front" style="background-image: url('img/demo/alex.jpg');" id="video-00-01">
-                <div class="speaker">Alex Zhang</div>
-                <div class="title">Expand Your Mind: Lucid Dreaming 101</div>
-              </div>
-              <div class="card-back" id="watch-00-01">
-                <h2 class="speaker">Alex Zhang</h2>
-                <p class="description">Proving that Inception might not be so far fetched, this talk is a step-by-step guide for the process of lucid dreaming and its potential to impact our society's thought. He challenges his audience to push their creative limits and explore in new ways.</p>
-                <div class="watch">
-                  <a href="https://www.youtube.com/watch?v=K3i77WLegh8" target="_blank">Watch Video</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="card-front" style="background-image: url('img/demo/logan.jpg');" id="video-00-02">
-                <div class="speaker">Logan Heley</div>
-                <div class="title">American Politics: We Need You</div>
-              </div>
-              <div class="card-back" id="watch-00-02">
-                <h2 class="speaker">Logan Heley</h2>
-                <p class="description">A talk for society: that we should return to more active political engagement, dispelling the myth that our present political atmosphere is beyond saving. He suggests Americans need to more directly involve themselves in their political process if they hope to see true social change.</p>
-                <div class="watch">
-                  <a href="https://www.youtube.com/watch?v=OXNX2MeN0Yk" target="_blank">Watch Video</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="card-front" style="background-image: url('img/demo/michelle.jpg');" id="video-00-03">
-                <div class="speaker">Michelle Lau</div>
-                <div class="title">How To Make Love Like A Pornstar: Results May Vary</div>
-              </div>
-              <div class="card-back" id="watch-00-03">
-                <h2 class="speaker">Michelle Lau</h2>
-                <p class="description">A talk focusing on the demand-side of trafficking; she studies porn and the negative side effects it has on relationships and individuals. By bringing these new facts to light, she hopes her audience will make a more informed decision on when to engage in porn.</p>
-                <div class="watch">
-                  <a href="https://www.youtube.com/watch?v=yJPsRHK7c0c" target="_blank">Watch Video</a>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
-    <!--
-      <section class="event" id="event-01">
-        <h1><span>Talk Two</span> December 5, 2014</h1>
-        <ul class="videos">
-          <li>
-            <div class="card-fill">
-              <h2>Coming Soon</h2>
-            </div>
-          </li>
-          <li>
-            <div class="card-fill">
-              <h2>Coming Soon</h2>
-            </div>
-          </li>
-          <li>
-            <div class="card-fill">
-              <h2>Coming Soon</h2>
-            </div>
-          </li>
-          <li>
-            <div class="card-fill">
-              <h2>Coming Soon</h2>
-            </div>
-          </li>
-        </ul>
-      </section>
-    -->
     </section>
 
     <section class="about" id="about">
@@ -181,22 +80,47 @@
       <div class="copyright">&copy; Tommy Talks 2014, All Rights Reserved.</div>
     </section>
 
-    <!-- scripts -->
+    <!-- Templates -->
+    <script id="talk-template" type="x-handlebars-template">
+    {{#each this}}
+    <section class="talk" id="talk-{{num}}">
+      <h1><span>{{name}}</span> {{date}}</h1>
+      <ul class="videos">
+        {{#each card}}
+        <li>
+          <div class="card">
+            <div class="card-front" style="background-image: url({{img}});" id="video-{{../num}}-{{num}}">
+              <div class="speaker">{{speaker}}</div>
+              <div class="title">{{title}}</div>
+            </div>
+            <div class="card-back" id="watch-{{../num}}-{{num}}">
+              <h2 class="speaker">{{speaker}}</h2>
+              <p class="description">{{description}}</p>
+              <div class="watch">
+                <a href="{{url}}" target="_blank">Watch Video</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+    {{/each}}
+    </script>
+
+    <!-- Scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- <script src="../node_modules/angular/angular.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <script src="js/main.js"></script>
+
     <script>
-        function scrollTo(link, target) {
-            link.click(function(e) {
-                e.preventDefault();
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                $('html, body').animate({
-                    scrollTop: target.offset().top - 30
-                }, 800);
-            });
-        }
-
-        scrollTo($('#talkslink'), $('#talks'));
-        scrollTo($('#aboutlink'), $('#about'));
+      ga('create', 'UA-56702951-1', 'auto');
+      ga('send', 'pageview');
     </script>
 
   </body>
