@@ -287,13 +287,10 @@ ul.navlist li a:hover {
   font-size: 18px;
   perspective: 1000;
 }
-.videos li:hover .card,
-.videos li.hover .card {
+.videos li:hover .card {
   /* flip the pane when hovered */
   -ms-transform: rotateY(180deg);
-  /* IE 9 */
   -webkit-transform: rotateY(180deg);
-  /* Chrome, Safari, Opera */
   transform: rotateY(180deg);
 }
 .card {
@@ -321,9 +318,7 @@ ul.navlist li a:hover {
   height: 280px;
   position: relative;
   -ms-transform: rotateY(0deg);
-  /* IE 9 */
   -webkit-transform: rotateY(0deg);
-  /* Chrome, Safari, Opera */
   transform: rotateY(0deg);
 }
 .card-front .speaker,
@@ -364,9 +359,7 @@ ul.navlist li a:hover {
   text-align: center;
   background: #f6851f;
   -ms-transform: rotateY(180deg);
-  /* IE 9 */
   -webkit-transform: rotateY(180deg);
-  /* Chrome, Safari, Opera */
   transform: rotateY(180deg);
 }
 .card-back .speaker {
