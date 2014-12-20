@@ -163,12 +163,15 @@ ul.navlist {
     perspective: 1000;
 
     &:hover .card, &.hover .card { /* flip the pane when hovered */
+      -ms-transform: rotateY(180deg); /* IE 9 */
+      -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
       transform: rotateY(180deg);
     }
   }
 }
 .card {
   transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .card-front, .card-back {
@@ -186,6 +189,8 @@ ul.navlist {
 .card-front {
   width: 100%; height: @card-height;
   position: relative;
+  -ms-transform: rotateY(0deg); /* IE 9 */
+  -webkit-transform: rotateY(0deg); /* Chrome, Safari, Opera */
   transform: rotateY(0deg);
 
   .speaker, .title {
@@ -220,6 +225,8 @@ ul.navlist {
   padding: 30px 20px;
   text-align: center;
   background: @theme-orange;
+  -ms-transform: rotateY(180deg); /* IE 9 */
+  -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
   transform: rotateY(180deg);
 
   .speaker {
