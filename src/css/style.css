@@ -294,6 +294,7 @@ ul.navlist li a:hover {
   transform: rotateY(180deg);
 }
 .card {
+  position: relative;
   transition: 0.6s;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -312,6 +313,7 @@ ul.navlist li a:hover {
   background-clip: padding-box;
   backface-visibility: hidden;
   /* hide back of pane during swap */
+  -webkit-backface-visibility: hidden;
 }
 .card-front {
   width: 100%;

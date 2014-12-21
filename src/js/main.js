@@ -52,7 +52,7 @@ var data = [
         url: "https://www.youtube.com/watch?v=yJPsRHK7c0c"
       }
     ]
-  },
+  }
   // {
   //   num: 2,
   //   name:"Talk Two",
@@ -93,7 +93,10 @@ var data = [
   //   ]
   // }
 ];
-var templateSource = $("#talk-template").html();
 
-var template = Handlebars.compile(templateSource);
-$("#talks").append(template(data));
+$(document).ready(function() {
+  var templateSource = $("#talk-template").html();
+
+  var template = Handlebars.compile(templateSource);
+  $("#talks").append(template(data));
+});
