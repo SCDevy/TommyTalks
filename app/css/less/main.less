@@ -1,0 +1,421 @@
+@import (once) "reset.less";
+
+/* main.less */
+/* Author: Stephen Chen 2014 */
+/* ========================================================================= */
+
+/* Variables */
+/* ----------------------------------------------------- */
+@theme-orange: #F6851F;
+@theme-gray: #929292;
+@header-height: 130px;
+@section-space: 90px;
+@card-height: 280px;
+@value-hw: 58px;
+@sm-hw: 42px;
+
+/* Fonts */
+/* ----------------------------------------------------- */
+@font-face {
+    font-family: 'Lane';
+    src: url('../font/lane.ttf');
+}
+
+/* General */
+/* ----------------------------------------------------- */
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: #FFF; color: @theme-gray;
+}
+.container {
+  width: 1024px;
+  min-width: 768px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+.container-full {
+  width: 100%;
+  min-width: 768px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+
+.divider {
+  .container;
+
+  margin-bottom: @section-space;
+  border: 0;
+  border-top: 1px solid #DDD;
+
+  &.nopad {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Header */
+/* ----------------------------------------------------- */
+.popup {
+  height: 100%; width: 100%;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 10;
+  display: none;
+}
+
+/* Header */
+/* ----------------------------------------------------- */
+.header {
+  .container;
+
+  height: @header-height;
+  line-height: @header-height;
+  text-align: left;
+  overflow: hidden;
+}
+.letterhead {
+  height: @header-height - 50;
+  display: inline-block;
+  vertical-align: middle;
+}
+ul.navlist {
+  position: absolute;
+  top: 14px; right: 0;
+  display: inline-block;
+  font-family: 'Lane';
+
+  li {
+    margin-left: 40px; margin-right: -4px; /* correct for letter spacing */
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: 0.2s;
+
+      &:hover {
+        color: @theme-orange;
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+/* Talks */
+/* ----------------------------------------------------- */
+.talks {
+  .container;
+
+  height: auto;
+  margin-bottom: @section-space;
+  /* border: 1px solid #DDD; */
+}
+.controls {
+  margin-top: 10px;
+  position: absolute;
+  top: 0; right: 0;
+	z-index: 999999;
+	
+	-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;   
+}
+.navigate {
+  font-size: 28px;
+  color: #EEE; /* OG: #EEE */
+  .backward {
+    margin-right: 2px;
+		cursor: pointer;
+		transition: 0.3s;
+  }
+  .forward {
+    margin-left: 2px;
+		cursor: pointer;
+		transition: 0.3s;
+  }
+	.backward:hover, .forward:hover {
+		color: @theme-orange;
+		transition: 0.3s;
+	}
+}
+.talk {
+  h1 {
+    margin: 5px 0;
+    position: relative;
+    font-family: 'Lane';
+    letter-spacing: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    span {
+      padding: 10px 14px 10px 20px; /* correct for letter spacing */
+      display: inline-block;
+      font-size: 24px;
+      background: @theme-orange; color: #FFF;
+    }
+  }
+}
+.videos {
+  width: 100%; height: 100%;
+  position: relative;
+  font-size: 0;
+
+  li {
+    width: 50%; height: 50%;
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    perspective: 1000;
+
+    &:hover .card { /* flip the pane when hovered */
+      -ms-transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+  }
+}
+.card {
+  position: relative;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.card-front, .card-back {
+	position: absolute;
+	top: 0; left: 0;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px solid #FFF;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+  backface-visibility: hidden; /* hide back of pane during swap */
+  -webkit-backface-visibility: hidden;
+}
+.card-front {
+  width: 100%; height: @card-height;
+  position: relative;
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+
+  .speaker, .title {
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    font-family: 'Lane';
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+  .speaker {
+    padding: 10px 4px 10px 10px; /* correct for letter spacing */
+    bottom: 60px;
+    font-size: 18px;
+    letter-spacing: 6px;
+    background: @theme-orange; color: #FFF;
+    z-index: 1;
+  }
+  .title {
+    padding: 10px 8px 10px 10px; /* correct for letter spacing */
+    bottom: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    background: rgba(0,0,0,0.6); color: #FFF;
+    z-index: 0;
+  }
+}
+.card-back {
+  width: 100%; height: @card-height;
+  padding: 30px 20px;
+  text-align: center;
+  background: @theme-orange;
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+
+  .speaker {
+    margin-right: -6px; /* correct for letter spacing */
+    padding-bottom: 15px;
+    font-family: 'Lane';
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #FFF;
+  }
+  .description {
+    padding-bottom: 20px;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 22px;
+    color: #FFF;
+  }
+  .watch {
+    width: 100%;
+    padding-bottom: 30px;
+    position: absolute;
+    bottom: 0; right: 0; left: 0;
+  }
+  .watch a {
+    padding: 8px 4px 8px 8px; /* correct for letter spacing */
+    position: relative;
+    display: inline-block;
+    border: 1px solid white;
+    font-family: 'Lane';
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: none; color: #FFF;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      background: #FFF; color: @theme-orange;
+      transition: 0.4s;
+    }
+  }
+}
+.card-fill {
+  width: 100%; height: @card-height;
+  padding: 30px 20px;
+  text-align: center;
+  line-height: @card-height - 60;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px solid #FFF;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+  background: @theme-orange;
+
+  h2 {
+    margin-right: -6px; /* correct for letter spacing */
+    font-family: 'Lane';
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #FFF;
+  }
+}
+
+/* About */
+/* ----------------------------------------------------- */
+.about {
+  .container;
+
+  margin-bottom: @section-space;
+  font-size: 0;
+}
+.whoweare, .mission {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+
+  h1 {
+    margin-right: -4px; /* correct for letter spacing */
+    padding-bottom: 10px;
+    font-family: 'Lane';
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: @theme-orange;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 32px;
+  }
+}
+.whoweare {
+  text-align: left;
+}
+.mission {
+  text-align: right;
+}
+
+/* Values */
+/* ----------------------------------------------------- */
+.values {
+  .container;
+
+  margin-bottom: @section-space;
+  font-size: 0;
+  text-align: center;
+}
+.value {
+  width: 33.3%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18px;
+
+  img {
+    padding-bottom: 30px;
+    height: 50px;
+  }
+  h2 {
+    margin-right: -4px; /* correct for letter spacing */
+    padding-bottom: 20px;
+    font-family: 'Lane';
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: @theme-orange;
+  }
+  p {
+    padding: 0 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 28px;
+    box-sizing: border-box;
+  }
+}
+
+/* Footer */
+/* ----------------------------------------------------- */
+.footer {
+  .container-full;
+
+  padding: 40px 0;
+  text-align: center;
+
+  >a {
+    width: @sm-hw; height: @sm-hw;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+.socialmedia {
+  width: 100%; height: 100%;
+}
+.contact, .copyright {
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  a {
+    color: @theme-orange;
+  }
+}
