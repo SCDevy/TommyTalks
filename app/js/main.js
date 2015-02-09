@@ -56,7 +56,7 @@ var data = [
 				button: "Watch Video"
       }
     ]
-  }, 
+  },
 	{
 	 num: 2,
 	 name:"Talk Two",
@@ -66,8 +66,8 @@ var data = [
 			 num: 1,
 			 speaker: "Amy Suto",
 			 title: "The Secrets of Building Creativity",
-			 description: "NEEDED.",
-			 img: "img/demo/filler.jpg",
+			 description: "A talk about how to reach one's full creative potential using techniques and tools. Students need to begin to learn how to train their brains to be more unconventional to elevate the standards of living in the modern world and become the innovators of the future.",
+			 img: "img/demo/amy.jpg",
 			 url: "https://www.youtube.com/watch?v=fdaqepfKu8k",
 				button: "Watch Video"
 		 },
@@ -75,8 +75,8 @@ var data = [
 			 num: 2,
 			 speaker: "Nathaniel Haas",
 			 title: "The 'No' Factor",
-			 description: "NEEDED.",
-			 img: "img/demo/filler.jpg",
+			 description: "A talk about how saying 'yes' has caused us to be more stressed and less friendly. Hungarian psychology experiments, strangers with candy, and nuclear war with Russia have one thing in common: they demonstrate the immense power and potential of saying 'no'.",
+			 img: "img/demo/nathaniel.jpg",
 			 url: "https://www.youtube.com/watch?v=tMjIkPox4g4",
 				button: "Watch Video"
 		 },
@@ -84,8 +84,8 @@ var data = [
 			 num: 3,
 			 speaker: "Liwei Xu",
 			 title: "Stepping Out of Boundaries",
-			 description: "NEEDED.",
-			 img: "img/demo/filler.jpg",
+			 description: "A talk from the perspective of an international student at USC. In it, he speaks about his experiences, and suggests ways in which we can make all students feel more connected at our school and in our community.",
+			 img: "img/demo/liwei.jpg",
 			 url: "https://www.youtube.com/watch?v=4SS0KCD8aHo",
 				button: "Watch Video"
 		 },
@@ -107,14 +107,14 @@ $(document).ready(function() {
 
   var template = Handlebars.compile(templateSource);
   $("#talks").append(template(data));
-	
+
 	var length = data.length;
 	var current = 1;
-	
+
 	for (var i = 1; i <= length; i++) {
 		if (i != 1) $('#talk-' + i).hide();
 	}
-	
+
 	$('#backward').click(function() {
 		var prev = current;
 		if (current === 1) current = length;
@@ -130,4 +130,3 @@ $(document).ready(function() {
 		$('#talk-' + current).show();
 	});
 });
-
