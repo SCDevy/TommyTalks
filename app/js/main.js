@@ -109,10 +109,10 @@ $(document).ready(function() {
   $("#talks").append(template(data));
 
 	var length = data.length;
-	var current = 1;
+	var current = 2;
 
 	for (var i = 1; i <= length; i++) {
-		if (i != 1) $('#talk-' + i).hide();
+		if (i != current) $('#talk-' + i).hide();
 	}
 
 	$('#backward').click(function() {
